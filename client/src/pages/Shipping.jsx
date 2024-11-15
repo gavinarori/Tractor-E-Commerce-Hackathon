@@ -49,19 +49,7 @@ const Shipping = () => {
     return (
         <div>
             <Headers />
-            <section className='bg-[url("http://localhost:3000/images/banner/order.jpg")] h-[220px] mt-6 bg-cover bg-no-repeat relative bg-left'>
-                <div className='absolute left-0 top-0 w-full h-full bg-[#2422228a]'>
-                    <div className='w-[85%] md:w-[80%] sm:w-[90%] lg:w-[90%] h-full mx-auto'>
-                        <div className='flex flex-col justify-center gap-1 items-center h-full w-full text-white'>
-                            <h2 className='text-3xl font-bold'>Shop.my</h2>
-                            <div className='flex justify-center items-center gap-2 text-2xl w-full'>
-                                <Link to='/'>Home</Link>
-                                <span className='pt-2'><MdOutlineKeyboardArrowRight /></span>
-                                <span>Place Order</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <section className='bg-[url("https://images.unsplash.com/photo-1530267981375-f0de937f5f13?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")] h-[220px] mt-6 bg-cover bg-no-repeat relative bg-left'>
             </section>
             <section className='bg-[#eeeeee]'>
                 <div className='w-[85%] lg:w-[90%] md:w-[90%] sm:w-[90] mx-auto py-16'>
@@ -109,7 +97,7 @@ const Shipping = () => {
                                                         <input onChange={inputHandle} value={state.area} type="text" className='w-full px-3 py-2 border border-slate-200 outline-none focus:border-indigo-500 rounded-md' name='area' placeholder='area' id='province' />
                                                     </div>
                                                     <div className='flex flex-col gap-1 mt-3 w-full'>
-                                                        <button className='px-3 py-[6px] rounded-sm hover:shadow-indigo-500/20 hover:shadow-lg bg-indigo-500 text-white'>Save</button>
+                                                        <button className='px-1 py-[6px]  hover:shadow-indigo-500/20 hover:shadow-lg bg-black rounded-xl text-white'>Save</button>
                                                     </div>
                                                 </div>
                                             </form>
@@ -123,7 +111,6 @@ const Shipping = () => {
                                                 <span className='text-slate-600 text-sm'>{state.address} {state.province} {state.city} {state.area}</span>
                                                 <span onClick={() => setRes(false)} className='text-indigo-500 cursor-pointer'> change</span>
                                             </p>
-                                            <p className='text-slate-600 text-sm'>Email to sheikhfarid@gmail.com</p>
                                         </div>
                                     }
                                 </div>
@@ -159,7 +146,7 @@ const Shipping = () => {
                         <div className='w-[33%] md-lg:w-full'>
                             <div className="pl-3 md-lg:pl-0">
                                 <div className='bg-white font-medium p-5 text-slate-600 flex flex-col gap-3'>
-                                    <h2 className='text-xl font-semibold'>Order Summary</h2>
+                                    <h2 className='text-xl font-semibold text-black'>Order Summary</h2>
                                     <div className='flex justify-between items-center'>
                                         <span>Items Total({price})</span>
                                         <span>${price}</span>
@@ -176,7 +163,7 @@ const Shipping = () => {
                                         <span>Total</span>
                                         <span>${price + shipping_fee}</span>
                                     </div>
-                                    <button onClick={placeOrder} disabled={res ? false : true} className={`px-5 py-[6px] rounded-sm hover:shadow-orange-500/20 hover:shadow-lg ${res ? 'bg-orange-500' : 'bg-orange-300'} text-sm text-white uppercase`}>Place Order</button>
+                                    <button onClick={placeOrder} disabled={res ? false : true} className={`px-5 py-[6px] rounded-lg hover:shadow-orange-500/20 hover:shadow-lg ${res ? 'bg-black' : 'bg-black/50'} text-sm text-white uppercase`}>Place Order</button>
                                 </div>
                             </div>
                         </div>

@@ -64,19 +64,7 @@ const CategoryShops = () => {
     return (
         <div>
             <Headers />
-            <section className='bg-[url("http://localhost:3000/images/banner/shop.gif")] h-[220px] mt-6 bg-cover bg-no-repeat relative bg-left'>
-                <div className='absolute left-0 top-0 w-full h-full bg-[#2422228a]'>
-                    <div className='w-[85%] md:w-[80%] sm:w-[90%] lg:w-[90%] h-full mx-auto'>
-                        <div className='flex flex-col justify-center gap-1 items-center h-full w-full text-white'>
-                            <h2 className='text-3xl font-bold'>Shop.my</h2>
-                            <div className='flex justify-center items-center gap-2 text-2xl w-full'>
-                                <Link to='/'>Home</Link>
-                                <span className='pt-1'><MdOutlineKeyboardArrowRight /></span>
-                                <span>Products</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <section className='bg-[url("https://images.unsplash.com/photo-1635351464708-5ae89490f0d7?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")] h-[220px] mt-6 bg-cover bg-no-repeat relative bg-left'>
             </section>
             <section className='py-16'>
                 <div className='w-[85%] md:w-[90%%] sm:w-[90%] lg:w-[90%] h-full mx-auto'>

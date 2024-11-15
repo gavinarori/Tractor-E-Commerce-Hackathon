@@ -125,9 +125,10 @@ const Headers = () => {
                 </div>
                 <div className={`w-[300px] z-[9999] transition-all duration-200 fixed  ${showShidebar ? '-left-[300px]' : 'left-0'} top-0 overflow-y-auto bg-white h-screen py-6 px-8`}>
                     <div className='flex justify-start flex-col gap-6'>
-                        <Link to='/'>
-                            <img src="https://cdn.vectorstock.com/i/1000v/15/40/tractor-logo-emblem-design-vector-44971540.avif" alt="logo" />
-                        </Link>
+                    <Link className='relative flex h-16 items-center  ' to='/'>
+                                    <img src="https://cdn.vectorstock.com/i/1000v/15/40/tractor-logo-emblem-design-vector-44971540.avif" className='h-16 w-16' alt="logo" />
+                                    <span className=' font-bold text-[32px] sm:text-[22px]'>Tractor Hub</span>
+                    </Link>
                         <div className='flex justify-star items-center gap-10'>
 
                             {
