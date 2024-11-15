@@ -153,18 +153,11 @@ const Details = () => {
     return (
         <div>
             <Headers />
-            <div className='bg-[url("http://localhost:3000/images/banner/order.jpg")] h-[220px] mt-6 bg-cover bg-no-repeat relative bg-left'>
-                <div className='absolute left-0 top-0 w-full h-full bg-[#2422228a]'>
-                    <div className='w-[85%] md:w-[80%] sm:w-[90%] lg:w-[90%] h-full mx-auto'>
-                        <div className='flex flex-col justify-center gap-1 items-center h-full w-full text-white'>
-                            <h2 className='text-3xl font-bold'>Shop.my</h2>
-                        </div>
-                    </div>
-                </div>
+            <div className='bg-[url("https://plus.unsplash.com/premium_photo-1661849148702-e6318869623e?q=80&w=1445&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")] h-[220px] mt-6 bg-cover bg-no-repeat relative bg-left'>
             </div>
             <div className='bg-slate-100 py-5 mb-5'>
                 <div className='w-[85%] md:w-[80%] sm:w-[90%] lg:w-[90%] h-full mx-auto'>
-                    <div className='flex justify-start items-center text-md text-slate-600 w-full'>
+                    <div className='flex justify-start items-center text-md text-black w-full'>
                         <Link to='/'>Home</Link>
                         <span className='pt-1'><MdOutlineKeyboardArrowRight /></span>
                         <Link to='/'>{product.category}</Link>
@@ -202,7 +195,7 @@ const Details = () => {
                             </div>
                         </div>
                         <div className='flex flex-col gap-5'>
-                            <div className='text-3xl text-slate-600 font-bold'>
+                            <div className='text-3xl text-black font-bold'>
                                 <h2>{product.name}</h2>
                             </div>
                             <div className='flex justify-start items-center gap-4'>
@@ -225,18 +218,18 @@ const Details = () => {
                             <div className='flex gap-3 pb-10 border-b'>
                                 {
                                     product.stock ? <>
-                                        <div className='flex bg-slate-200 h-[50px] justify-center items-center text-xl'>
+                                        <div className='flex bg-slate-200 h-[50px] justify-center items-center rounded-lg text-xl'>
                                             <div onClick={dec} className='px-6 cursor-pointer'>-</div>
                                             <div className='px-5'>{quantity}</div>
                                             <div onClick={inc} className='px-6 cursor-pointer'>+</div>
                                         </div>
                                         <div>
-                                            <button onClick={add_card} className='px-8 py-3 h-[50px] cursor-pointer hover:shadow-lg hover:shadow-purple-500/40 bg-purple-500 text-white'>Add To Card</button>
+                                            <button onClick={add_card} className='px-8 py-3 rounded-lg h-[50px] cursor-pointer hover:shadow-lg hover:shadow-purple-500/40 bg-purple-500 text-white'>Add To Cart</button>
                                         </div>
                                     </> : ''
                                 }
                                 <div>
-                                    <div onClick={add_wishlist} className='h-[50px] w-[50px] flex justify-center items-center cursor-pointer hover:shadow-lg hover:shadow-cyan-500/40 bg-cyan-500 text-white'>
+                                    <div onClick={add_wishlist} className='h-[50px] w-[50px] rounded-lg flex justify-center items-center cursor-pointer hover:shadow-lg hover:shadow-cyan-500/40 bg-cyan-500 text-white'>
                                         <AiFillHeart />
                                     </div>
                                 </div>
@@ -268,9 +261,9 @@ const Details = () => {
                             </div>
                             <div className='flex gap-3'>
                                 {
-                                    product.stock ? <button onClick={buy} className='px-8 py-3 h-[50px] cursor-pointer hover:shadow-lg hover:shadow-emerald-500/40 bg-emerald-500 text-white'>Buy Now</button> : ""
+                                    product.stock ? <button onClick={buy} className='px-8 py-3 h-[50px] rounded-lg cursor-pointer hover:shadow-lg hover:shadow-emerald-500/40 bg-emerald-500 text-white'>Buy Now</button> : ""
                                 }
-                                <Link to={`/dashboard/chat/${product.sellerId}`} className='px-8 py-3 h-[50px] cursor-pointer hover:shadow-lg hover:shadow-lime-500/40 bg-lime-500 text-white block'>Chat Seller</Link>
+                                <Link to={`/dashboard/chat/${product.sellerId}`} className='px-8 py-3 h-[50px] rounded-lg cursor-pointer hover:shadow-lg hover:shadow-lime-500/40 bg-lime-500 text-white block'>Chat Seller</Link>
                             </div>
                         </div>
                     </div>
